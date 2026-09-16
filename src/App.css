@@ -1,0 +1,27 @@
+.app {
+  min-height: 100vh;
+
+  background: #080b09;
+  color: #d7ffd0;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.app::before {
+  content: "";
+
+  position: fixed;
+  inset: 0;
+
+  pointer-events: none;
+
+  z-index: 100;
+
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 2px,
+    rgba(255, 255, 255, 0.02) 3px
+  );
+}

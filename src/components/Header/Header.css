@@ -1,0 +1,139 @@
+.header {
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 40px;
+
+  background: #0d120f;
+  border-bottom: 1px solid #26352b;
+
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header__logo {
+  flex-shrink: 0;
+
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 2px;
+
+  color: #d7ffd0;
+}
+
+.header__logo span {
+  color: #39ff14;
+}
+
+.header__navigation {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+
+  margin-left: auto;
+  margin-right: 40px;
+}
+
+.header__navigation a {
+  position: relative;
+
+  color: #718070;
+
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+
+  text-decoration: none;
+
+  transition: color 0.2s;
+}
+
+.header__navigation a::before {
+  content: ">";
+
+  position: absolute;
+  left: -14px;
+
+  color: #39ff14;
+
+  opacity: 0;
+
+  transition: opacity 0.2s;
+}
+
+.header__navigation a:hover {
+  color: #39ff14;
+}
+
+.header__navigation a:hover::before {
+  opacity: 1;
+}
+
+.header__status {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 10px;
+  letter-spacing: 2px;
+
+  color: #718070;
+}
+
+.header__status-dot {
+  width: 7px;
+  height: 7px;
+
+  background: #39ff14;
+
+  box-shadow: 0 0 10px #39ff14;
+
+  animation: status-blink 1.5s infinite;
+}
+
+@keyframes status-blink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0.2;
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    padding: 0 20px;
+  }
+
+  .header__navigation {
+    gap: 18px;
+    margin-right: 20px;
+  }
+
+  .header__status {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .header {
+    overflow-x: auto;
+  }
+
+  .header__navigation {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .header__navigation a {
+    white-space: nowrap;
+  }
+}

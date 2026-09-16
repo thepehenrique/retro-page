@@ -1,0 +1,333 @@
+.hero {
+  min-height: calc(100vh - 64px);
+
+  max-width: 1200px;
+  margin: 0 auto;
+
+  padding: 60px 40px;
+
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  align-items: center;
+  gap: 80px;
+}
+
+.hero__content {
+  min-width: 0;
+}
+
+.hero__terminal {
+  font-size: 12px;
+  line-height: 1.8;
+
+  color: #718070;
+}
+
+.hero__terminal p {
+  margin: 0;
+}
+
+.hero__terminal p span:first-child {
+  color: #39ff14;
+}
+
+.hero__terminal .cursor {
+  color: #39ff14;
+
+  animation: cursor-blink 1s steps(1) infinite;
+}
+
+.hero__main {
+  margin-top: 55px;
+}
+
+.hero__eyebrow {
+  margin: 0 0 16px;
+
+  color: #39ff14;
+
+  font-size: 12px;
+  letter-spacing: 5px;
+}
+
+.hero h1 {
+  margin: 0;
+
+  font-family: "Courier New", monospace;
+
+  font-size: clamp(80px, 12vw, 150px);
+  line-height: 0.85;
+
+  letter-spacing: -10px;
+
+  color: #d7ffd0;
+
+  text-shadow:
+    0 0 5px rgba(57, 255, 20, 0.4),
+    0 0 25px rgba(57, 255, 20, 0.15);
+}
+
+.hero h1 span {
+  color: #39ff14;
+}
+
+.hero__description {
+  max-width: 580px;
+
+  margin: 35px 0 0;
+
+  font-size: 18px;
+  line-height: 1.7;
+
+  color: #718070;
+}
+
+.hero__technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin-top: 30px;
+}
+
+.hero__technologies span {
+  padding: 8px 12px;
+
+  border: 1px solid #26352b;
+
+  background: #0d120f;
+
+  color: #718070;
+
+  font-size: 11px;
+
+  transition: 0.2s;
+}
+
+.hero__technologies span:hover {
+  color: #39ff14;
+
+  border-color: #39ff14;
+
+  box-shadow: 0 0 12px rgba(57, 255, 20, 0.15);
+}
+
+.hero__actions {
+  display: flex;
+  gap: 12px;
+
+  margin-top: 40px;
+}
+
+.hero__actions a {
+  padding: 14px 24px;
+
+  border: 1px solid #39ff14;
+
+  color: #39ff14;
+
+  font-size: 11px;
+  font-weight: bold;
+
+  text-decoration: none;
+
+  transition: 0.2s;
+}
+
+.hero__actions a:hover {
+  background: #39ff14;
+
+  color: #080b09;
+
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.3);
+}
+
+/* =========================================
+   SYSTEM PANEL
+========================================= */
+
+.system-panel {
+  width: 100%;
+
+  border: 1px solid #26352b;
+
+  background: #0d120f;
+
+  box-shadow:
+    0 0 0 1px rgba(57, 255, 20, 0.03),
+    0 0 30px rgba(57, 255, 20, 0.03);
+}
+
+.system-panel__header {
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 14px;
+
+  border-bottom: 1px solid #26352b;
+
+  color: #718070;
+
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.system-panel__indicator {
+  color: #39ff14;
+
+  text-shadow: 0 0 8px #39ff14;
+}
+
+.system-panel__body {
+  padding: 22px;
+}
+
+.stat {
+  margin-bottom: 22px;
+}
+
+.stat__label {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 8px;
+
+  font-size: 10px;
+  letter-spacing: 1px;
+
+  color: #718070;
+}
+
+.stat__bar {
+  height: 5px;
+
+  background: #182119;
+
+  overflow: hidden;
+}
+
+.stat__bar span {
+  display: block;
+
+  height: 100%;
+
+  background: #39ff14;
+
+  box-shadow: 0 0 8px rgba(57, 255, 20, 0.6);
+}
+
+.system-panel__divider {
+  height: 1px;
+
+  margin: 25px 0;
+
+  background: #26352b;
+}
+
+.system-panel__info {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 14px;
+
+  font-size: 10px;
+}
+
+.system-panel__info span:first-child {
+  color: #718070;
+}
+
+.system-panel__info span:last-child {
+  color: #d7ffd0;
+}
+
+.system-panel__info .online {
+  color: #39ff14;
+}
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes cursor-blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+
+    padding: 70px 30px;
+  }
+
+  .system-panel {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 50px 20px;
+  }
+
+  .hero__main {
+    margin-top: 40px;
+  }
+
+  .hero h1 {
+    font-size: clamp(60px, 20vw, 100px);
+
+    letter-spacing: -6px;
+  }
+
+  .hero__description {
+    font-size: 16px;
+  }
+}
+
+.hero__specialties {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin-top: 28px;
+}
+
+.hero__specialties span {
+  padding: 7px 11px;
+
+  border: 1px solid #39ff14;
+
+  color: #39ff14;
+
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+
+  background: rgba(57, 255, 20, 0.03);
+}
+
+.hero__secondary {
+  margin: 20px 0 0;
+
+  font-size: 12px;
+
+  color: #526052;
+}
