@@ -63,7 +63,7 @@ const projects: Project[] = [
   {
     number: '04',
     type: 'JOGO / PESSOAL',
-    title: 'RPG.IO',
+    title: 'DUNGEON.IO',
     description:
       'Protótipo de RPG 2D top-down com temática dark fantasy, desenvolvido para explorar criação de jogos, mapas, combate e sistemas de progressão.',
     technologies: [
@@ -73,7 +73,8 @@ const projects: Project[] = [
       'Tiled',
       'React',
     ],
-    status: 'EM DESENVOLVIMENTO',
+    status: 'EM DESENVOLVIMENTO - V1 DISPONÍVEL',
+    link: 'https://dungeon-io.vercel.app/'
   },
 ];
 
